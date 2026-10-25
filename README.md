@@ -51,28 +51,42 @@ sudo systemctl enable zabbix-server zabbix-agent apache2
 ---
 
 ### Задание 2
+`Установите Zabbix Agent на два хоста.
 
+Процесс выполнения
+
+Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
+Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
+Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
+Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
+Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
+Требования к результатам
+
+Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
+Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
+Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
+Приложите в файл README.md текст использованных команд в GitHub`
 
 ### Решение 2
 
-# 1. Добавление репозитория (аналогично серверу)
+1. Добавление репозитория (аналогично серверу)
+```
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
 sudo dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
 sudo apt update
-
-# 2. Установка только агента 
+```
+```
+3. Установка только агента 
 sudo apt install -y zabbix-agent
-
-# 3. Настройка подключения к серверу
+```
+```
+4. Настройка подключения к серверу
 sudo nano /etc/zabbix/zabbix_agent.conf
-
-# 4. Запуск
+```
+```
+5. Запуск
 sudo systemctl restart zabbix-agent2
 sudo systemctl enable zabbix-agent2
+```
 
-### Задание 3
-
-
-
-### Задание 4
 
