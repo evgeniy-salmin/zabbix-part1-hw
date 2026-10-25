@@ -44,6 +44,9 @@ sudo sed -i 's/# DBPassword=/DBPassword=zabbix_pass/' /etc/zabbix/zabbix_server.
 sudo systemctl restart zabbix-server zabbix-agent apache2
 sudo systemctl enable zabbix-server zabbix-agent apache2
 ```
+
+<img width="1920" height="952" alt="image" src="https://github.com/user-attachments/assets/64fcad71-8fc5-42b3-a17b-ea42d3931d92" />
+
 ---
 
 ### Задание 2
