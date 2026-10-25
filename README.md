@@ -53,6 +53,22 @@ sudo systemctl enable zabbix-server zabbix-agent apache2
 ### Задание 2
 
 
+### Решение 2
+
+# 1. Добавление репозитория (аналогично серверу)
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+sudo dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+sudo apt update
+
+# 2. Установка только агента 
+sudo apt install -y zabbix-agent
+
+# 3. Настройка подключения к серверу
+sudo nano /etc/zabbix/zabbix_agent.conf
+
+# 4. Запуск
+sudo systemctl restart zabbix-agent2
+sudo systemctl enable zabbix-agent2
 
 ### Задание 3
 
