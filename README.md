@@ -88,5 +88,6 @@ sudo nano /etc/zabbix/zabbix_agent.conf
 sudo systemctl restart zabbix-agent2
 sudo systemctl enable zabbix-agent2
 ```
+<img width="1749" height="116" alt="image" src="https://github.com/user-attachments/assets/7740abd6-3e46-4a97-bc85-c7e79ace00ab" />
 
 
